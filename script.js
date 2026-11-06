@@ -107,3 +107,25 @@ var mathResults = "Grade Scores: " +
 
 // 5. Display results on the webpage
 document.querySelector("#mathOutput").innerHTML = mathResults;
+
+/* ==========================
+   Part 4: Conditional Messages
+   ========================== */
+
+// 1. Check if the converted value is NaN
+if (Number.isNaN(converted3)) {
+    document.querySelector("#numberConversionOutput").innerHTML +=
+        "<p>This value is not a valid number.</p>";
+} else {
+    document.querySelector("#numberConversionOutput").innerHTML +=
+        "<p>This value is a valid number.</p>";
+}
+
+// 2. Check if the average score is passing
+if (averageScore >= 70) {
+    document.querySelector("#mathOutput").innerHTML +=
+        "<p>Passing</p>";
+} else {
+    document.querySelector("#mathOutput").innerHTML +=
+        "<p>Not passing</p>";
+}
